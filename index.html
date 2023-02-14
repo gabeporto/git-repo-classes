@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Index</title>
 </head>
 <body>
-    <div>
-        <h1>Good night!</h1>
+    <div class="text-center mt-10">
+        <h1 id="title"></h1>
     </div>
 </body>
+
+<script>
+    let now = new Date();
+    let hour = now.getHours();
+
+    let user = "Gabriel Porto";
+
+    console.log(hour);
+
+    if(hour >= 18) {
+        document.getElementById('title').innerHTML = `Good night, ${user}!`;
+    } else if(hour >= 12) {
+        document.getElementById('title').innerHTML = `Good afternoon, ${user}!`;
+    } else {
+        document.getElementById('title').innerHTML = `Good morning, ${user}!`;
+    }
+</script>
 </html>
